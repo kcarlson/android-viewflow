@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2011 Patrik �kerfeldt
+ * Copyright (C) 2011 Patrik ���kerfeldt
  * 
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -169,7 +169,9 @@ public class CircleFlowIndicator extends View implements FlowIndicator,
 		float circleSeparation = 2*radius+spacing;
 		//this is the amount the first circle should be offset to make the entire thing centered
 		float centeringOffset = 0;
-		
+		if(mCentered) {
+			centeringOffset = ((getWidth() - measureWidth(MeasureSpec.UNSPECIFIED)) / 2);
+		}
 		int leftPadding = getPaddingLeft();
 		
 		// Draw stroked circles
